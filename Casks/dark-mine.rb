@@ -1,6 +1,6 @@
 cask "dark-mine" do
-  version "0.1.0"
-  sha256 "0677bbe6a6fba49741362ae2f271c8f681a9d251ceae6dc31500f1736998a6fa"
+  version "0.1.1"
+  sha256 "dc04f79f02c6c50cb94e38bdf6f3e14a06113ebaa423576d449feb1baf373161"
 
   url "https://github.com/Jackson-Pike/homebrew-dark-mine/releases/download/v#{version}/DarkMine-Mac.zip"
   name "Dark Mine"
