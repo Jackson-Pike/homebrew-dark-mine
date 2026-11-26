@@ -7,12 +7,13 @@ cask "dark-mine" do
   desc "First-person mining game where blind creatures hunt by sound"
   homepage "https://github.com/Jackson-Pike/homebrew-dark-mine"
 
+  depends_on :macos
+
   app "Dark Mine.app"
 
   # Not signed with a paid Apple developer account: clear the "downloaded" flag so macOS lets it open.
-  postflight do
-    system_command "/usr/bin/xattr",
-                   args: ["-dr", "com.apple.quarantine", "#{appdir}/Dark Mine.app"]
+  postflight_steps do
+    run "/usr/bin/xattr", args: ["-dr", "com.apple.quarantine", "{{appdir}}/Dark Mine.app"]
   end
 
   zap trash: [
